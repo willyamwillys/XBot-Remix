@@ -17,6 +17,7 @@ googletrans
 google_images_download
 gTTS
 gTTS-token
+geopy
 hachoir
 # heroku
 heroku3
