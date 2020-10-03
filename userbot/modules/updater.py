@@ -38,8 +38,7 @@ async def gen_chlog(repo, diff):
 
 
 async def print_changelogs(event, ac_br, changelog):
-    changelog_str = (
-        f"**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
+    changelog_str = f'**UPDATE Terbaru Untuk 🔥XBOT-REMIX🔥 [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
     )
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
@@ -59,7 +58,7 @@ async def print_changelogs(event, ac_br, changelog):
             reply_to=event.id,
         )
         await event.delete()
-        msg = await event.respond('do "`.update now` or `.update deploy`" to update.')
+        msg = await event.respond('COMMAND TO UPDATE "\n`•.update now`\n`•.update deploy`"\n\nUntuk mengupdate fitur terbaru.')
         await asyncio.sleep(15)
         await cl.delete()
         await msg.delete()
@@ -141,10 +140,12 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit(
-        "`Successfully Updated!\n" "ProjectAlf is restarting... Wait for a second!`"
-    )
-    await asyncio.sleep(15)
+    await event.edit('`**XBOT** Berhasil Di Update!`')
+    await asyncio.sleep(1)
+    await event.edit('`XBOT Di Restart....`')
+    await asyncio.sleep(1)
+    await event.edit('`Silahkan Tunggu Beberapa Detik!`')
+    await asyncio.sleep(10)
     await event.delete()
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
@@ -180,9 +181,9 @@ async def upstream(event):
         origin = repo.create_remote("upstream", off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head("master", origin.refs.master)
-        repo.heads.master.set_tracking_branch(origin.refs.master)
-        repo.heads.master.checkout(True)
+        repo.create_head("staging", origin.refs.staging)
+        repo.heads.staging.set_tracking_branch(origin.refs.staging)
+        repo.heads.staging.checkout(True)
 
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
@@ -212,8 +213,7 @@ async def upstream(event):
 
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`ProjectAlf is`  **up-to-date**  `on`  " f"**{UPSTREAM_REPO_BRANCH}**\n"
-        )
+            f'\n`🔥XBOT-REMIX🔥\n` sudah **versi terbaru**\n`BRANCH:`**{UPSTREAM_REPO_BRANCH}**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
@@ -227,7 +227,10 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating ProjectAlf, please wait....`")
+        await event.edit('`Proses Update XBOT-REMIX, ....🛠️`')
+        await event.edit('`Proses Update XBOT-REMIX, loading....🛠️`')
+        await event.edit('`Proses Update XBOT-REMIX, updating....🛠️`')
+        await event.edit('`Proses Update XBOT-REMIX, silahkan tunggu....🛠️`')
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(15)
         await event.delete()
