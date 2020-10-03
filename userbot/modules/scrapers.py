@@ -179,7 +179,7 @@ async def gsearch(q_event):
         page = 1
     search_args = (str(match), int(page))
     gsearch = GoogleSearch()
-    gresults = await gsearch.async_search(*search_args)
+    gresults = await gsearch.async_search(*search_args, url="google.de")
     msg = ""
     for i in range(10):
         try:
