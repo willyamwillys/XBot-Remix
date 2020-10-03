@@ -39,7 +39,7 @@ pytz
 qrcode
 redis
 requests
-search-engine-parser
+search-engine-parser>=0.6.1
 speedtest-cli
 sqlalchemy
 TgCrypto
