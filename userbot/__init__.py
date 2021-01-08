@@ -24,8 +24,7 @@ from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
 
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+
 
 load_dotenv("config.env")
 
@@ -320,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n┣[•🔥 XBOT-REMIX\n┣[•☑️ BERHASIL DIAKTIFKAN\n┣[•👤 {DEFAULTUSER}\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
+    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n┣[•🔥 XBOT-REMIX\n┣[•☑️ BERHASIL DIAKTIFKAN\n┣[•👤 @willyamwillys\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
     return
 
 with bot:
