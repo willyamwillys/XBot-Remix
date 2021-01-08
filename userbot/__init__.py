@@ -239,7 +239,6 @@ def is_mongo_alive():
         return False
     return True
 
-
 # Init Redis
 # Redis will be hosted inside the docker container that hosts the bot
 # We need redis for just caching, so we just leave it to non-persistent
@@ -314,8 +313,10 @@ with bot:
         quit(1)
 
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n🔥 XBOT-REMIX\n☑️BERHASIL DIAKTIFKAN\n👤 {DEFAULTUSER}\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
+    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n┣[•🔥 XBOT-REMIX\n┣[•☑️ BERHASIL DIAKTIFKAN\n┣[•👤 {DEFAULTUSER}\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
     return
 
 with bot:
