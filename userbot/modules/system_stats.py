@@ -229,14 +229,12 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
 async def amireallyalive(alive):
-    name0 = str(name.first_name)
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
         f"۝⩵꙰ཱི►XBOT-REMIX◄⩵꙰ཱི۝\n running on 🤖 `{UPSTREAM_REPO_BRANCH}` 🤖\n"
         f"╭━━━━━━━━━━━━━━━━━━━━━╮\n"
-        f"┣[•👤 `USER     :`{name0}\n"
-        f"┣[ 👁‍🗨 `Username :`@{user.username}\n"
+        f"┣[•👤 `USER     :`{DEFAULTUSER}\n"
         "`┣▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱`\n"
         f"┣[•⚙️ `Telethon :`v {version.__version__} 🔥\n"
         f"┣[•🐍 `Python   :`v {python_version()} 🔥\n"
