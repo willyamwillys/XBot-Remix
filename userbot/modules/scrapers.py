@@ -154,8 +154,9 @@ async def carbon_api(e):
     await e.client.send_file(
         e.chat_id,
         file,
-        caption="Made using [Carbon](https://carbon.now.sh/about/),\
-        \na project by [Dawn Labs](https://dawnlabs.io/)",
+        caption="Dibuat sama [Carbon](https://carbon.now.sh/about/),\
+        \nsebuah project dari [Dawn Labs](https://dawnlabs.io/),\
+        \nRe-Make Carbon dari [WillyamWillys](https://t.me/willyamwillys/)",
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
