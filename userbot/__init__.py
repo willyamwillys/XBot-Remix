@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n┣[•🔥 XBOT-REMIX\n┣[•☑️ BERHASIL DIAKTIFKAN\n┣[•👤 @willyamwillys\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
+    await bot.send_message(BOTLOG_CHATID, "```╭━━━━━━━━━━━━━━━━━━━━━╮\n┣[•🔥 Willyam's Bot\n┣[•☑️ BERHASIL DIAKTIFKAN\n┣[•👤 @willyamwillys\n╰━━━━━━━━━━━━━━━━━━━━━╯```")
     return
 
 with bot:
