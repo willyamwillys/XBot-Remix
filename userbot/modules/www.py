@@ -9,7 +9,7 @@
 from datetime import datetime
 
 from speedtest import Speedtest
-from userbot import CMD_HELP, StartTime
+from userbot import CMD_HELP, StartTime, ALIVE_NAME
 from userbot.events import register
 import time
 
@@ -88,7 +88,10 @@ async def pingme(pong):
     await pong.edit("`Pinging....`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"➡️ **PONG!! 🍭**\n➡️ **Pinger** : %sms 📶\n➡️ **Bot Uptime** : {uptime}🕛\n➡️ **Majikan** : 👤 {ALIVE_NAME}" % (duration))
+    await pong.edit(f"➡️ **PONG!! 🍭**\n
+                      ➡️ **Pinger** : `%sms` 📶\n
+                      ➡️ **Bot Uptime** : `{uptime}`🕛\n
+                      ➡️ **Majikan** : 👤 {ALIVE_NAME}" % (duration))
 
 
 @register(outgoing=True, pattern="^.pong$")
