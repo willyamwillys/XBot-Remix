@@ -390,9 +390,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("I'm [XBOT-REMIX](https://github.com/X-Newbie/XBot-Remix) modules helper...\nplease make your own bot, don't use mine 😋")
+                await event.reply("Saya [Willyam's Bot](https://github.com/willyamwillys/XBot-Remix) modul pembantu...\ntolong buat bot Anda sendiri, jangan gunakan bot saya 😋")
             else:
-                await event.reply(f"`Hey there {ALIVE_NAME}\n\nI work for you :)`")
+                await event.reply(f"`Hei yang disana {ALIVE_NAME}\n\nAku bekerja untukmu :)`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -402,9 +402,9 @@ with bot:
             if event.query.user_id == uid and query.startswith("@UserButt"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
-                    "Please Use Only With .help Command",
-                    text="{}\nTotal loaded Modules: {}\n               \n🖥 **Main Menu** 🖥\n".format(
-                        "🔥XBOT-REMIX🔥 modules helper",
+                    "Harap Gunakan Hanya Dengan Perintah .help",
+                    text="{}\nTotal Modul yang dimuat: {}\n               \n🖥 **Menu utama** 🖥\n".format(
+                        "🔥Willyam's Bot🔥 modul pembantu",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,19 +412,19 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "🔥XBOT-REMIX🔥 Helper",
-                    text="List of Modules",
+                    "🔥Willyam's Bot🔥 Pembantu",
+                    text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "XBOT-REMIX",
-                    text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
+                    "Willyam's Bot",
+                    text="""Anda dapat mengubah akun Anda menjadi bot dan menggunakannya. Ingat, Anda tidak dapat mengelola bot orang lain! Semua detail instalasi dijelaskan dari alamat GitHub di bawah ini.""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/X-Newbie/XBot-Remix"),
+                                "https://github.com/willyamwillys/XBot-Remix"),
                             custom.Button.url(
                                 "Support",
                                 "www.pornhub.com")],
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Silakan buat sendiri, jangan gunakan bot saya!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -465,7 +465,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Silakan buat sendiri, jangan gunakan bot saya!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -481,7 +481,7 @@ with bot:
                 if len(cmdhel) > 150:
                     help_string = (
                         str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
-                        + "\n\nRead more .help "
+                        + "\n\nBaca lebih banyak .help "
                         + modul_name
                         + " "
                     )
@@ -491,12 +491,12 @@ with bot:
                 reply_pop_up_alert = (
                     help_string
                     if help_string is not None
-                    else "{} No document has been written for module.".format(
+                    else "{} Tidak ada dokumen yang telah ditulis untuk modul.".format(
                         modul_name
                     )
                 )
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "Silakan buat sendiri, jangan gunakan bot saya!"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
