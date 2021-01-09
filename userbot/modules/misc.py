@@ -65,7 +65,7 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Shutdown *XBOT-REMIX*....`")
+    await event.edit("`Shutdown *Willyam's Bot*....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -76,7 +76,7 @@ async def killdabot(event):
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting XBOT-REMIX....`")
+    await event.edit("`Restarting Willyam's Bot....`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
@@ -120,7 +120,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "╭━━━━━━━━𖠄━━━━━━━━╮\n \n[┣━─━─[ XBOT-REMIX ]─━─━┫](https://github.com/X-Newbie/XBot-Remix) \n \n╰━━━━━━━━𖠄━━━━━━━━╯\n     \n"
+        "╭━━━━━━━━𖠄━━━━━━━━╮\n \n[┣━─━─[ Willyam's Bot ]─━─━┫](https://github.com/willyamwillys/XBot-Remix) \n \n╰━━━━━━━━𖠄━━━━━━━━╯\n     \n"
     )
 
 
