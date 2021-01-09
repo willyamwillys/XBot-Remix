@@ -47,7 +47,7 @@ DEF_UNAPPROVED_MSG = (
     "   ♥️♥️TERIMAKASIH ❤️♥️\n"
     "─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇\n"
     f"- ©Bot Assisten `{DEFAULTUSER}`\n"
-    "- Protected By 🔥XBOT-REMIX🔥")
+    "- Protected By 🔥Willyam's Bot🔥")
 # =================================================================
 
 
